@@ -1,0 +1,35 @@
+public class java {
+import java.util.Scanner;
+
+    
+    public static void main(String[] args) {
+        Scanner ent = new Scanner(System.in);
+        System.out.println("Digite seu nome");
+        String nome = ent.nextLine();
+        int nota1, nota2;
+        int media, i;
+        
+        
+            // recebe a 1º nota
+            System.out.println("Aluno " + nome + ", digite sua 1ª nota");
+            nota1 = ent.nextInt();
+            
+            // recebe a 2º nota
+            System.out.println("Aluno " + nome + ", digite sua 2ª nota");
+            nota2 = ent.nextInt();
+            
+            // calcula a média
+            media = (nota1 + nota2) / 2;
+            System.out.println("A média do aluno " + nome + " é " + media);
+            
+            if( (media >= 0) && (media <5) ){
+                System.out.println(nome + " Sua nota foi baixa");
+            } else if( (media >= 5) && media < 7){
+                System.out.println(nome + " Sua nota foi média");
+            } else if( (media >= 7) &&media <= 10){
+                System.out.println(nome + " Sua nota foi alta");
+            } else {
+                System.out.println(nome + " nota inválida");
+        }
+    }
+}   
